@@ -1,0 +1,77 @@
+
+function random() {
+  return Math.floor(Math.random() * (25 - 6) + 5)
+}
+
+const mas = new Array(30).fill(0).map(() => random())
+mas
+const min10 = mas.filter(num => num > 10).length
+console.log("Elementu didesniu nei 10 kiekis: ")
+min10
+
+const max = Math.max(...mas)
+console.log("Didziausias elementas: ")
+max
+
+// let maxVal = []
+// mas.reduce((acc, value, index) => {
+//   if (value === max) {
+//   maxVal.push(index)
+// }                      
+// })
+// console.log("Didziausiu reiksmiu indeksai")
+// maxVal
+// let suma = mas.reduce((acc, value, index) => {
+//   if (index % 2 === 0) {
+//     return acc + value
+//   }
+//   return acc
+// },0);
+
+//suma
+
+const naujasMas = mas.map((value, index) => {
+  return value - index
+})
+
+naujasMas
+
+const pliusMas = new Array(10).fill(0).map(() => random())
+naujasMas.push(...pliusMas)
+naujasMas
+
+const porinis = naujasMas.filter((x,i) => i % 2 === 0)
+porinis
+const neporinis = naujasMas.filter((x,i) => i % 2 != 0)
+neporinis
+
+naujasMas.map((value, index) => {
+  if (index % 2 == 0) {
+    if (value > 15) {
+     return value = 0
+    }
+  }
+  return value
+})
+
+mazindex = mas.findIndex(num => num < 10)
+mazindex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
