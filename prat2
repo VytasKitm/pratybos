@@ -1,0 +1,118 @@
+function random(x) {
+  return Math.floor(Math.random() * x)
+}
+raides = ['A','B','C','D']
+
+const mas = new Array(200).fill(0).map(() => raides[random(raides.length)])
+mas
+
+let sumA = 0
+let sumB = 0
+let sumC = 0
+let sumD = 0
+
+mas.forEach(num => {
+  // if (num == 'A') {
+  //   return ++sumA
+  // }
+  // if (num == 'B') {
+  //   return ++sumB
+  // }
+  // if (num == 'C') {
+  //   return ++sumC
+  // }
+  // if (num == 'D') {
+  //   return ++sumD
+  // }
+  switch (num) {
+    case 'A':
+      return sumA++;
+    case 'B':
+      return sumB++;
+    case 'C':
+      return sumC++;
+    case 'D':
+      return sumD++;
+  }
+})
+console.log("A raidziu yra:")
+sumA
+console.log("B raidziu yra:")
+sumB
+console.log("C raidziu yra:")
+sumC
+console.log("D raidziu yra:")
+sumD
+
+
+const surikiuotas = mas.sort()
+surikiuotas
+
+
+function random999(len) {
+  return Math.floor(Math.random() * (len-101) + 100)
+}
+
+let ranMas1 = new Array(900).fill().map((el, index) =>  index + 100)
+let ranMas2 = new Array(900).fill().map((el, index) =>  index + 100)
+
+const naujasMas1 = new Array(100).fill(1).map(() => {
+  return ranMas1.splice(random999(ranMas1.length),1)
+}).flat(1)
+
+const naujasMas2 = new Array(100).fill().map(() => {
+  return ranMas2.splice(random999(ranMas2.length),1)
+}).flat(1)
+ranMas1
+
+naujasMas1
+naujasMas2
+
+let masSutampa = []
+
+
+masNesutampa = naujasMas1.map((el) => {
+    if (!naujasMas2.includes(el))
+      return el
+}).filter(num => num != undefined)
+
+masSutampa = naujasMas1.map((el) => {
+    if (naujasMas2.includes(el))
+      return el
+}).filter(num => num != undefined)
+
+
+function random25() {
+  return Math.floor(Math.random() * (25 - 6) + 5)
+}
+
+let mas6 = new Array(10).fill(1)
+
+// mas6 = mas6.map((el,index,mas6) => {
+//   if (index < 2) {
+//     return random25()
+//   }
+//   return mas6[0]
+// })
+const mas7 = mas6.forEach((num,i) => {
+  if (i < 2) {
+    return num = random25()
+  }
+})
+// mas6.forEach((num,i) => {
+//   if (i < 2) {
+//     num = random25()
+//   }
+  
+// })
+
+mas6
+
+
+
+
+
+
+
+
+
